@@ -12,7 +12,7 @@ int add_num(int x, int y);
 
 
 //main function
-int main() {
+int main(void) {
     //print
     printf("hello world!\n");
 
@@ -31,8 +31,7 @@ int main() {
     const int const_value = 10;
 
     //input values from keyboard
-    int input_value;
-    cin >> input_value;
+    int input_value = 100;
 
     //if
     int age = 23;
