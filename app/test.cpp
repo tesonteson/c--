@@ -3,12 +3,19 @@
 using namespace std;
 #include <stdio.h>
 #include <iomanip>
-#include <string>
 
 
-//call functions defined below main function
-int nibai(int x);
-int add_num(int x, int y);
+
+//other functions
+int nibai(int x) {
+    x *= 2;
+    return x;
+}
+
+int add_num(int x, int y) {
+    return x + y;
+}
+
 
 
 //main function
@@ -19,7 +26,7 @@ int main(void) {
     //type
     int value = 100;
     double pi = 3.14;
-    string name = "teson";
+    char name[10] = "teson";
 
     //インクリメント、ディクリメント
     int x_increment = 10;
@@ -102,17 +109,5 @@ int main(void) {
     cout << "done!" << endl;
 
     return 0;
-}
-
-
-//other functions
-int nibai(int x) {
-    x *= 2;
-    return x;
-}
-
-
-int add_num(int x, int y) {
-    return x + y;
 }
 
