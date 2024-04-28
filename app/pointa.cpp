@@ -53,7 +53,7 @@ int main(void){
     replace(&apple);
     cout << apple << "\n";
 
-    //　無理くり件数から複数の値を受け取る
+    // 無理くり関数から複数の値を受け取る
     int num1 = 30;
     int num2 = 10;
     int tasizan = 0;
