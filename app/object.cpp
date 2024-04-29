@@ -7,22 +7,18 @@ using namespace std;
 
 int main(void){
 
-    Student Teson = {10, 23};
+    Student Teson;
+    Teson.year = 23;
+    Teson.num = 10;
     Teson.show();
 
     Student *p;
     p = &Teson;
     cout << (*p).year << "\n";
 
-    Student students[3] = {
-        {10, 30},
-        {10, 40},
-        {10, 50}
-    };
-    int i;
-    for (i=0; i < 3; i++){
-        students[i].show();
-    };
+    Teson.setPass(4126);
+    int pass = Teson.getPass();
+    cout << pass << endl;
 
     return 0;
 };

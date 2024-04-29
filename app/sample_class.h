@@ -4,10 +4,22 @@ using namespace std;
 
 
 class Student{
+    private:
+        int pass;
     public:
         int num;
         int year;
         void show();
+        void setPass(int x);
+        int getPass();
+};
+
+void Student::setPass(int x){
+    pass = x;
+};
+
+int Student::getPass(){
+    return pass;
 };
 
 void Student::show(){
