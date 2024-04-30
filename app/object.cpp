@@ -7,9 +7,9 @@ using namespace std;
 
 int main(void){
 
-    Student Teson;
+    Student Kim;
+    Student Teson(10, 23);
     Teson.year = 23;
-    Teson.num = 10;
     Teson.show();
 
     Student *p;
@@ -19,6 +19,12 @@ int main(void){
     Teson.setPass(4126);
     int pass = Teson.getPass();
     cout << pass << endl;
+
+    Student a(100, 20);
+    cout << a.num << endl;
+    Student b = a;
+    cout << a.num << endl;
+    cout << b.num << endl;
 
     return 0;
 };
