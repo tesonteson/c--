@@ -9,7 +9,6 @@ int main(void){
 
     Student Kim;
     Student Teson(10, 23);
-    Teson.year = 23;
     Teson.show();
 
     Student *p;
@@ -18,13 +17,16 @@ int main(void){
 
     Teson.setPass(4126);
     int pass = Teson.getPass();
-    cout << pass << endl;
 
     Student a(100, 20);
-    cout << a.num << endl;
     Student b = a;
     cout << a.num << endl;
     cout << b.num << endl;
+
+    Seitokai Gold;
+
+    Children teson;
+    teson.show();
 
     return 0;
 };
