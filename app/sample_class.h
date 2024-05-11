@@ -6,9 +6,14 @@ public:
     int num;
     int year;
     static int grade;
+
     void show();
     void setPass(int x);
     int getPass();
+    virtual void hello();
+    void hello(string name);
+    Student operator+(Student x);
+
     Student();
     Student(int x, int y);
     Student(const Student &obj);
@@ -17,6 +22,20 @@ private:
     int pass;
 protected:
     bool right;
+};
+
+void Student::hello(){
+    cout << "hello Student" << endl;
+};
+
+void Student::hello(string name){
+    cout << "hello " << name << endl;
+};
+
+Student Student::operator+(Student x){
+    Student tmp;
+    tmp.num = num + x.num;
+    return tmp;
 };
 
 int Student::grade = 5;
@@ -51,10 +70,18 @@ void Student::show() {
     cout << "年齢:" << year << "\n";
 }
 
+
+
 class Seitokai : public Student {
 public:
+    void hello();
+
     Seitokai();
     Seitokai(int x, int y);
+};
+
+void Seitokai::hello(){
+    cout << "hello Seitokai" << endl;
 };
 
 Seitokai::Seitokai() : Student() {
@@ -81,3 +108,26 @@ class Mother : public virtual Human {};
 class Father : public virtual Human {};
 
 class Children : public Mother, public Father{};
+
+
+
+class Point {
+    public:
+        int x;
+        int y;
+
+        Point(int a, int b);
+        Point operator+(Point obj);
+};
+
+Point::Point(int a, int b){
+    x = a;
+    y = b;
+};
+
+Point Point::operator+(Point obj){
+    Point tmp(0, 0);
+    tmp.x = x + obj.x;
+    tmp.y = y + obj.y;
+    return tmp;
+};
